@@ -23,37 +23,7 @@ The testing was conducted using the `quick_test.gleam` module, which benchmarks 
 - Larger chunk sizes (100,000+): Showed diminishing returns and slightly worse performance
 
 The result of running your program for lukas 1000000 4:
-n=1000000 k=24 workers=333333 chunk=600
-1
-9
-20
-25
-44
-76
-121
-197
-304
-353
-540
-856
-1301
-2053
-3112
-3597
-5448
-8576
-12981
-20425
-30908
-35709
-54032
-84996
-128601
-202289
-306060
-353585
-534964
-841476
+No Output
 
 === Performance Metrics ===
 Wall clock time (total execution): 1.526 s
