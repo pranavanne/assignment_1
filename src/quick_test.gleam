@@ -5,7 +5,7 @@ import lukas_core
 import timing
 
 pub fn test_chunk_size(chunk: Int) -> Nil {
-  let n = 10_000_000
+  let n = 1_000_000
   let k = 24
   let workers = 16
 
@@ -22,9 +22,6 @@ pub fn test_chunk_size(chunk: Int) -> Nil {
   let ratio = cpu_time / wall_time
 
   io.println("Results:")
-  io.println("  Wall time: " <> int.to_string(wall_time) <> " ms")
-  io.println("  CPU time: " <> int.to_string(cpu_time) <> " ms")
-  io.println("  CPU/Wall ratio: " <> int.to_string(ratio))
   io.println("  Result count: " <> int.to_string(list.length(results)))
   io.println("")
 }

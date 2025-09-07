@@ -7,7 +7,7 @@ import timing
 pub fn main() {
   let n = 100_000_000
   let k = 24
-  let workers = 16
+  let workers = 8
   let chunk = 10_000
 
   io.println(
@@ -37,16 +37,5 @@ pub fn main() {
   list.each(results, fn(a) { io.println(int.to_string(a)) })
 
   // Print timing information
-  io.println("\n=== Performance Metrics ===")
-  io.println(
-    "Wall clock time (total execution): "
-    <> int.to_string(elapsed_time_ms)
-    <> " ms",
-  )
-  io.println(
-    "CPU runtime (process time): " <> int.to_string(runtime_diff) <> " ms",
-  )
-  io.println(
-    "CPU time / Real time: " <> int.to_string(runtime_diff / elapsed_time_ms),
-  )
+  
 }

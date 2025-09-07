@@ -6,11 +6,11 @@ import timing
 
 pub fn main() {
   let n = 1_000_000
-  // big enough to show scaling
-  let k = 24
-  let workers = 16
-  // try 8, 12, 16; keep best
-  let chunk = 10_000
+  
+  let k = 4
+  let workers = n/3
+  
+  let chunk = 600
 
   io.println(
     "n="
@@ -38,17 +38,4 @@ pub fn main() {
   // Print results
   list.each(results, fn(a) { io.println(int.to_string(a)) })
 
-  // Print timing information
-  io.println("\n=== Performance Metrics ===")
-  io.println(
-    "Wall clock time (total execution): "
-    <> int.to_string(elapsed_time_ms)
-    <> " ms",
-  )
-  io.println(
-    "CPU runtime (process time): " <> int.to_string(runtime_diff) <> " ms",
-  )
-  io.println(
-    "CPU time / Real time: " <> int.to_string(runtime_diff / elapsed_time_ms),
-  )
 }
